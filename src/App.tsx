@@ -22,6 +22,7 @@ import {
   valueCards,
 } from "./data/content";
 import { useContactForm } from "./hooks/useContactForm";
+import SuperAdminApp from "./super-admin/pages/SuperAdminPage";
 
 // -----------------------------------------------------------------------------
 // Shared configuration and form validation
@@ -1395,6 +1396,7 @@ function Footer({ onPrivacy }: { onPrivacy: () => void }) {
   );
 }
 export default function App() {
+  if (window.location.pathname.startsWith("/super-admin")) return <SuperAdminApp />;
   const [privacy, setPrivacy] = useState(false);
   const [service, setService] = useState<string>();
   const go = (value: string) => {
