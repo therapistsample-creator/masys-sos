@@ -10,7 +10,7 @@ The Super Admin module is intentionally isolated from the landing page in:
 
 1. Copy `.env.example` to `.env` and set `DATABASE_URL` and `SECRET_KEY`.
 2. Create a Python virtual environment and install `pip install -r backend/requirements.txt`.
-3. Run `alembic -c backend/alembic.ini upgrade head`.
+3. Run `cd backend && alembic upgrade head`.
 4. Start the API with `npm run dev:api` for development or `npm run start:api` with Gunicorn/Uvicorn workers.
 5. Open `/super-admin` and sign in with the requested bootstrap credentials.
 
